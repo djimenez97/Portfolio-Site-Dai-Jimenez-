@@ -1,0 +1,114 @@
+/*Color Palette:
+Burgundy: #420704
+Rose: #a15655
+Light Pink: #faf0f0
+Off-White: #fdf8f8
+White: #ffffff
+ */
+img {
+  width: 100%;
+}
+
+body {
+  background-color: #ffffff;
+  font-family: 'Vollkorn-Variable';
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: #420704;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1.4;
+}
+
+h1 {
+  font-family: 'VickyChristina';
+  font-size: 2em
+  color: #420704;
+}
+
+h2 {
+  font-size: 2.25em;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 400;
+}
+h4 {
+  font-size: 1.35em;
+  font-weight: 400;
+}
+
+/*LINKS*/
+a {
+  color: #a15655;
+  font-weight: 600;
+  text-decoration: none; /* No underlining */
+}
+a:visited {
+  font-weight: 600;
+  color: #b08382;
+}
+a:active {
+  font-weight: 600;
+  color: #a15655;
+}
+a:hover {
+  font-weight: 600;
+  color: #d65e5c;
+  text-decoration: underline;
+}
+a:focus {
+  font-weight: 600;
+  color: #d65e5c;
+  text-decoration: underline;
+}
+
+/*FONTS*/
+@font-face {
+  src: url(Fonts/Vollkorn);
+  font-family: 'Vollkorn';
+}
+
+@font-face {
+  src: url(Fonts/VickyChristina.otf);
+  font-family: 'VickyChristina';
+}
+
+/*Buttons*/
+.button {
+  display: inline-block;
+  background-color: #420704;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 3px;
+  transition: 0.2s opacity;
+}
+
+.button:hover {
+  opacity: 0.9; /* Reduces the opacity of the button to 90% */
+  background-color: #420704;
+}
+
+.button:active {
+  background-color: #661c1b;
+  text-decoration: none;
+}
+
+.button.contact {
+  background-color: transparent;
+  color: #420704;
+  border: 2px solid #420704;
+}
+
+.button.contact:hover {
+  opacity: 0.8;
+}
+
+button.contact:active {
+  color: #661c1b;
+}
