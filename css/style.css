@@ -5,34 +5,43 @@ Light Pink: #faf0f0
 Off-White: #fdf8f8
 White: #ffffff
  */
+
+* {
+  box-sizing: border-box;
+}
+#Layer_1 {
+ display: inline-block;
+ width: 40px;
+ height: 40px;
+}
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
 img {
   width: 100%;
 }
-
 body {
   background-color: #ffffff;
   font-family: 'Vollkorn-Variable';
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 300;
   line-height: 1.6;
   color: #420704;
 }
-
 h1, h2, h3, h4 {
   line-height: 1.4;
 }
-
 h1 {
   font-family: 'VickyChristina';
   font-size: 2em
   color: #420704;
 }
-
 h2 {
   font-size: 2.25em;
   font-weight: 700;
 }
-
 h3 {
   font-size: 1.75em;
   font-weight: 400;
@@ -40,6 +49,15 @@ h3 {
 h4 {
   font-size: 1.35em;
   font-weight: 400;
+}
+header {
+  background-color: #fdf8f8;
+  text-align: center;
+  padding: 10px 0;
+  margin: 10px 10px 0 10px;
+  border-bottom: 3px solid #b08382;
+  box-shadow: 0px 8px 8px 0px rgba(160, 160, 160, 0.28);
+  position: relative;
 }
 
 /*LINKS*/
@@ -72,10 +90,133 @@ a:focus {
   src: url(Fonts/Vollkorn);
   font-family: 'Vollkorn';
 }
-
 @font-face {
   src: url(Fonts/VickyChristina.otf);
   font-family: 'VickyChristina';
+}
+
+/*LAYOUT STYLING*/
+.container {
+  padding: 0 15px;
+}
+.centered {
+ text-align: center;
+ max-width: 900px;
+ margin: auto;
+}
+.header {
+  text-align: center;
+  width: auto;
+}
+.row {
+  margin: 50px 0; /* 25px top and bottom, 0 left and right */
+}
+.footer {
+  padding-bottom: 40px;
+  margin-bottom: 60px;
+}
+.container h2 {
+  text-align: center;
+}
+.logo {
+  padding-top:20px;
+  max-width: 250px;
+}
+.social-icon{
+  margin: 10px;
+}
+.two-columns {
+  column-count: 2;
+  height: auto;
+}
+.three-columns {
+  column-count: 3;
+}
+.container.two-columns h3 {
+  column-span: all;
+}
+.container.three-columns h3 {
+  column-span: all;
+}
+.list {
+  border: 1px solid pink;
+}
+.cover-photos {
+  max-width: 800px;
+  margin: auto;
+  display: block;
+}
+.case-study {
+  max-width: 1000px;
+  padding: 40px 0 80px 0;
+  margin: auto;
+  display: block;
+}
+.padding {
+  padding: 20px 0;
+}
+
+#headshot {
+  max-width: 400px;
+  margin: auto;
+  display: block;
+}
+#resume {
+  text-align: center;
+}
+#works .row {
+  padding-bottom: 25px;
+  border-bottom: 1px solid #b08382;
+}
+#hero {
+  background-color: #fdf8f8;
+  width: 100%;
+  padding: 20px 20px 40px 20px;
+  margin: 0 10px 20px 10px;
+  display: inline-block;
+}
+#aboutme h1 {
+  text-align: center;
+}
+#brunchbuddy {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #b08382;
+}
+#lemonade {
+  margin-bottom: 40px;
+  border-bottom: 1px solid #b08382;
+}
+#contact p {
+  text-align: center;
+  max-width: 400px;
+  padding: 10px 0;
+  margin: auto;
+}
+
+nav > ul {
+  list-style-type: none;
+  padding: 0;
+}
+nav > ul > li {
+  display: inline-block;
+}
+nav > ul > li > a {
+  padding: 0 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #a15655;
+}
+nav > ul > li > a:visited {
+  color: #a15655;
+  text-decoration: none
+}
+nav > ul > li > a:hover {
+ color: #d65e5c;
+ text-decoration: none;
+}
+nav > ul > li > a:active {
+ color: #420704;
+ text-decoration: none;
 }
 
 /*Buttons*/
@@ -84,31 +225,34 @@ a:focus {
   background-color: #420704;
   color: #ffffff;
   font-weight: 600;
-  padding: 10px;
-  border-radius: 3px;
+  padding: 6px 24px;
+  margin-bottom: 24px;
+  border-radius: 6px;
   transition: 0.2s opacity;
 }
-
 .button:hover {
   opacity: 0.9; /* Reduces the opacity of the button to 90% */
   background-color: #420704;
 }
-
 .button:active {
   background-color: #661c1b;
   text-decoration: none;
 }
-
+.button.see-more {
+  color: #faf0f0;
+}
 .button.contact {
   background-color: transparent;
-  color: #420704;
-  border: 2px solid #420704;
+  color: #a15655;
+  text-decoration: none;
+  border: 2px solid #a15655;
 }
-
 .button.contact:hover {
   opacity: 0.8;
 }
-
-button.contact:active {
+.button.contact:visited {
+  text-decoration: none;
+}
+.button.contact:active {
   color: #661c1b;
 }
