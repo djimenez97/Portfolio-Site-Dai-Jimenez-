@@ -35,7 +35,7 @@ h1, h2, h3, h4 {
 }
 h1 {
   font-family: 'VickyChristina';
-  font-size: 2em
+  font-size: 2em;
   color: #420704;
 }
 h2 {
@@ -109,7 +109,7 @@ a:focus {
   width: auto;
 }
 .row {
-  margin: 50px 0; /* 25px top and bottom, 0 left and right */
+  margin: 50px auto; /* 25px top and bottom, 0 left and right */
 }
 .footer {
   padding-bottom: 40px;
@@ -132,10 +132,10 @@ a:focus {
 .three-columns {
   column-count: 3;
 }
-.container.two-columns h3 {
+.row.centered h3 {
   column-span: all;
 }
-.container.three-columns h3 {
+.row.centered h3 {
   column-span: all;
 }
 .list {
