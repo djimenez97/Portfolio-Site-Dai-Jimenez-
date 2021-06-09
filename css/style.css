@@ -311,7 +311,6 @@ nav > ul > li > a:active {
   }
   nav {
     width: auto;
-    max-width: 300px;
     float: right;
     margin-top: 24px;
   }
