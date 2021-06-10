@@ -17,8 +17,7 @@ White: #ffffff
 ul {
   list-style-type: none;
   padding: 0;
-  margin: 0;
-}
+ }
 img {
   width: 100%;
   margin: auto;
@@ -53,8 +52,7 @@ h4 {
 }
 header {
   background-color: #fdf8f8;
-  text-align: center;
-  padding: 40px 20px;
+  padding: 20px;
   border-bottom: 3px solid #b08382;
   box-shadow: 0px 8px 8px 0px rgba(160, 160, 160, 0.28);
   position: relative;
@@ -64,7 +62,7 @@ transition: [transition-property] [transition-duration];
 
 /*LINKS*/
 a {
-  color: #713734;
+  color: #420704;
   font-weight: 600;
   text-decoration: none; /* No underlining */
 }
@@ -72,19 +70,19 @@ a:visited {
   font-weight: 600;
   color: #b08382;
 }
-a:active {
-  font-weight: 600;
-  color: #420704;
-}
 a:hover {
   font-weight: 600;
   color: #d65e5c;
-  text-decoration: underline;
+  text-decoration: none;
+}
+a:active {
+  font-weight: 600;
+  color: #ab133b;
 }
 a:focus {
   font-weight: 600;
   color: #d65e5c;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
 /*FONTS*/
@@ -106,7 +104,7 @@ a:focus {
  max-width: 900px;
  margin: auto;
 }
-.header {
+.hero {
   text-align: center;
   width: auto;
 }
@@ -130,7 +128,7 @@ a:focus {
 }
 .logo {
   padding-top:20px;
-  max-width: 250px;
+  max-width: 150px;
 }
 .social-icon{
   margin: 10px;
@@ -145,11 +143,6 @@ a:focus {
 .list {
   border: 1px solid pink;
 }
-/*.cover-photos {
-  max-width: 800px;
-  margin: auto;
-  display: block;
-}*/
 .case-study {
   max-width: 1000px;
   padding: 40px 0 80px 0;
@@ -184,6 +177,32 @@ a:focus {
 .cloud-back {
   animation: 34s cloud-move-reverse infinite alternate linear;
 }
+.navtoggle li:not(:last-child) {
+  display: none;
+}
+.navtoggle, .navtoggle.responsive {
+  position: relative;
+}
+.navtoggle li .icon {
+  position: absolute;
+  right: 0;
+  padding-right: 0;
+  top: 2px;
+  font-size: 22px;
+}
+.navtoggle.responsive nav {
+  padding: 24px 0 0;
+}
+.navtoggle.responsive li  {
+  display: block;
+  padding: 10px 0;
+  border-top: 1px solid;
+  color: #d65e5c
+}
+.navtoggle.responsive li:last-child  {
+  padding: 0 0 10px;
+}
+
 @keyframes color-change {
   from {fill: #edc655;}
   to {fill: #f76414;}
@@ -226,6 +245,9 @@ a:focus {
   margin-bottom: 40px;
   border-bottom: 1px solid #b08382;
 }
+#contact {
+  onclick="menuToggle()";
+}
 #contact p {
   text-align: center;
   max-width: 400px;
@@ -236,27 +258,31 @@ a:focus {
 nav > ul {
   list-style-type: none;
   padding: 0;
+  margin: 0;
+  text-align: center;
 }
-nav > ul > li {
-  display: inline-block;
-}
+
 nav > ul > li > a {
-  padding: 0 15px;
+  padding: 15px;
   text-transform: uppercase;
   font-weight: 700;
-  color: #713734;
+  color: #420704;
+  text-decoration: none;
 }
 nav > ul > li > a:visited {
-  color: #713734;
-  text-decoration: none
+  color: #420704;
 }
 nav > ul > li > a:hover {
  color: #d65e5c;
- text-decoration: none;
 }
 nav > ul > li > a:active {
- color: #420704;
- text-decoration: none;
+ color: #ab133b;
+}
+nav > ul > li > a:focus {
+ color: #d65e5c;
+}
+.navtoggle.responsive li  {
+  display: block;
 }
 
 /*Buttons*/
@@ -303,16 +329,19 @@ nav > ul > li > a:active {
 /*__________BREAKPOINTS____________*/
 
 /* Medium devices (640px and larger)*/
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 641px) {
   header {
    text-align: unset;
-   padding: 40px 20px 40px 20px;
+   padding: 40px 20px 20px 20px;
    margin: 0;
   }
   nav {
     width: auto;
     float: right;
-    margin-top: 24px;
+    margin: auto;
+  }
+  nav > ul > li {
+    display: inline-block;
   }
   nav > ul > li > a {
     padding: 0 8px;
@@ -320,10 +349,15 @@ nav > ul > li > a:active {
   body {
     font-size: 20px;
   }
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+  .navtoggle li:last-child {
+    display: none;
+  }
   .logo {
-    padding-top:20px;
-    padding-left: 20px;
-    max-width: 250px;
+    padding: 0 8px;;
+    max-width: 200px;
   }
   .col-md-6 {
    width: 50%;
@@ -338,8 +372,18 @@ nav > ul > li > a:active {
     margin: 0;
   }
 }
+
 /*Large devices (1024px or larger)*/
 @media only screen and (min-width: 1024px) {
+  nav > ul > li {
+    display: inline-block;
+  }
+  .navtoggle li:not(:last-child) {
+    display: inline-block;
+  }
+  .navtoggle li:last-child {
+    display: none;
+  }
   .col-lg-5 {
     width: 40%;
     float: left;
@@ -349,11 +393,15 @@ nav > ul > li > a:active {
     float: left;
   }
   .container {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-}
-/*X-large devices (1440px or larger)*/
+
+/*X-large devices (1440px or larger)
 @media only screen and (min-width: 1440px) {
-}
+  nav > ul > li {
+    display: inline-block;
+  }
+} */
