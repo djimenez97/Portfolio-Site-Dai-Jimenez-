@@ -86,7 +86,7 @@ a:focus {
 
 /*FONTS*/
 @font-face {
-  src: url(Fonts/Vollkorn);
+  src: url(Fonts/Vollkorn.ttf);
   font-family: 'Vollkorn';
 }
 @font-face {
