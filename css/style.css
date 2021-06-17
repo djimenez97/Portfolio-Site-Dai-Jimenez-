@@ -145,6 +145,7 @@ a:focus {
 }
 .three-columns {
   column-count: 3;
+  height: auto;
 }
 .list {
   border: 1px solid pink;
