@@ -58,12 +58,10 @@ header {
   position: relative;
 }
 
-transition: [transition-property] [transition-duration];
-
-/*LINKS*/
+/* LINKS */
 a {
-  color: #420704;
   font-weight: 600;
+  color: #420704;
   text-decoration: none; /* No underlining */
 }
 a:visited {
@@ -122,6 +120,12 @@ a:focus {
 .footer {
   padding-bottom: 40px;
   margin-bottom: 60px;
+}
+.footer p {
+  text-align: center;
+  max-width: 400px;
+  padding: 10px 0;
+  margin: auto;
 }
 .container h2 {
   text-align: center;
@@ -245,15 +249,7 @@ a:focus {
   margin-bottom: 40px;
   border-bottom: 1px solid #b08382;
 }
-#contact {
-  onclick="menuToggle()";
-}
-#contact p {
-  text-align: center;
-  max-width: 400px;
-  padding: 10px 0;
-  margin: auto;
-}
+
 
 nav > ul {
   list-style-type: none;
